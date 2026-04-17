@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hotels</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <header id="header">
+        <nav class="navbar navbar-expand-lg w-100 position-fixed">
+  <div class="container-fluid nav">
+    <img src="./images/logo2.jpg" alt="" class="navbar-brand logo" >
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav m-auto">
+        <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
+        <a class="nav-link" href="./quiz.html">Quiz</a>
+        <a class="nav-link" href="./destinations.html">Destination</a>
+        <a class="nav-link" href="./hotels.html">Hotels</a>
+        <a class="nav-link contact" href="./contact.html">Contact</a>
+      </div>
+
+      <div class="right ms-auto">
+          <div class="icon_container"><i class="bi bi-globe"></i> ع</div>
+<div class="icon_container">
+    <i class="bi bi-moon" id="moon"></i>
+</div>
+          <button class="sign_in" data-bs-toggle="modal" data-bs-target="#signinModal">Sign in</button>
+
+          
+          <button class="sign_up" data-bs-toggle="modal" data-bs-target="#signupModal">Sign up</button>
+        </div>
+    </div>
+  </div>
+</nav>
+    </header>
+    <div class="modal fade" id="signupModal">
+            
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content p-3">
+
+      <div class="modal-header border-0">
+        <h5 class="modal-title">Create Your Account</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+
+      <div class="modal-body">
+
+        <form>
+          <div class="mb-3">
+            <input type="text" class="form-control" placeholder="Full Name">
+          </div>
+
+          <div class="mb-3">
+            <input type="email" class="form-control" placeholder="Email Address">
+          </div>
+
+          <div class="mb-3">
+            <input type="password" class="form-control" placeholder="Password">
+          </div>
+
+          <div class="mb-3">
+            <input type="password" class="form-control" placeholder="Confirm Password">
+          </div>
+
+          <div class="form-check mb-3">
+            <input class="form-check-input" type="checkbox">
+            <label class="form-check-label">
+              I agree to Terms & Privacy
+            </label>
+          </div>
+
+          <button class="btn btn-primary w-100">Sign Up</button>
+          <div class="social-login mt-3">
+    <button class="btn btn-google w-100 mb-2">
+        <i class="bi bi-google"></i> Continue with Google
+    </button>
+    <button class="btn btn-facebook w-100">
+        <i class="bi bi-facebook"></i> Continue with Facebook
+    </button>
+</div>
+        </form>
+
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+
+    <div class="modal fade" id="signinModal">
+            
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content p-3">
+
+      <div class="modal-header border-0">
+        <div class="welcome d-flex flex-column text-center justify-content-between">
+          <h5 class="modal-title fs-2 mb-2">Welcome back!</h5>
+        <p>Sign in to access your personalized recommendations</p>
+        </div>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+
+      <div class="modal-body">
+
+        <form>
+
+          <div class="mb-3">
+            <input type="email" class="form-control" placeholder="Email Address">
+          </div>
+
+          <div class="mb-3">
+            <input type="password" class="form-control" placeholder="Password">
+          </div>
+
+
+          <button class="btn btn-primary w-100">Sign In</button>
+          <div class="social-login mt-3">
+    <button class="btn btn-google w-100 mb-2">
+        <i class="bi bi-google"></i> Continue with Google
+    </button>
+    <button class="btn btn-facebook w-100">
+        <i class="bi bi-facebook"></i> Continue with Facebook
+    </button>
+</div>
+        </form>
+
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<section class="hotels-section">
+  <div class="hotels_titel"><h2>Our Hotels</h2></div>
+
+  <!-- Search Bar -->
+  <div class="search-bar">
+    <input type="text" placeholder="Search for a hotel or city...">
+    <button>Search</button>
+  </div>
+
+  <!-- Destination Cards -->
+  <div class="destination-cards">
+
+    <!-- 1. Tropitel Easy Husheish Resort -->
+    <div class="card">
+      <img src="./images/فندق.jpg" alt="">
+      <h3>Tropitel Easy Husheish Resort</h3>
+      <p><i class="bi bi-geo-alt-fill"></i> Sahl Hasheesh, Hurghada</p>
+      <p>A beachfront hotel offering comfortable rooms, relaxing pools, and Red Sea activities.</p>
+      <div class="rating">
+        <span><i class="fa-solid fa-star"></i> 4.6</span>
+        <span>(10,083 reviews)</span>
+      </div>
+      <div class="budjet">
+        <h3>$106 USD<span>/night</span></h3>
+        <button data-bs-toggle="modal" data-bs-target="#hotelModal" data-hotel="1">Book Now</button>
+      </div>
+    </div>
+
+    <!-- 2. Premier Le Reve Hotel & Spa Adult Only -->
+    <div class="card">
+      <img src="./images/فندق2.jpg" alt="">
+      <h3>Premier Le Reve Hotel & Spa Adult Only</h3>
+      <p><i class="bi bi-geo-alt-fill"></i> Sahl Hasheesh, Hurghada</p>
+      <p>A premium adults‑only resort with private beach, multiple pools, and luxury spa.</p>
+      <div class="rating">
+        <span><i class="fa-solid fa-star"></i> 4.8</span>
+        <span>(12,487 reviews)</span>
+      </div>
+      <div class="budjet">
+        <h3>$300 USD<span>/night</span></h3>
+        <button data-bs-toggle="modal" data-bs-target="#hotelModal" data-hotel="2">Book Now</button>
+      </div>
+    </div>
+
+    <!-- 3. Old Cataract Hotel -->
+    <div class="card">
+      <img src="./images/Old Cataract Hotel.jpg" alt="">
+      <h3>Old Cataract Hotel</h3>
+      <p><i class="bi bi-geo-alt-fill"></i> Aswan, Egypt</p>
+      <p>Luxury historic hotel overlooking the Nile with elegant rooms, spa, and fine dining.</p>
+      <div class="rating">
+        <span><i class="fa-solid fa-star"></i> 4.7</span>
+        <span>(2,845 reviews)</span>
+      </div>
+      <div class="budjet">
+        <h3>$250 USD<span>/night</span></h3>
+        <button data-bs-toggle="modal" data-bs-target="#hotelModal" data-hotel="3">Book Now</button>
+      </div>
+    </div>
+
+    <!-- 4. Steigenberger Cecil Hotel -->
+    <div class="card">
+      <img src="./images/Steigenberger Cecil Hotel.jpg" alt="">
+      <h3>Steigenberger Cecil Hotel</h3>
+      <p><i class="bi bi-geo-alt-fill"></i> Alexandria, Egypt</p>
+      <p>Historic luxury hotel near the Corniche offering elegant rooms and Mediterranean views.</p>
+      <div class="rating">
+        <span><i class="fa-solid fa-star"></i> 4.5</span>
+        <span>(3,200 reviews)</span>
+      </div>
+      <div class="budjet">
+        <h3>$140 USD<span>/night</span></h3>
+        <button data-bs-toggle="modal" data-bs-target="#hotelModal" data-hotel="4">Book Now</button>
+      </div>
+    </div>
+
+    <!-- 5. Hilton Marsa Alam Nubian Resort -->
+    <div class="card">
+      <img src="./images/Hilton Marsa Alam Nubian Resort.jpg" alt="">
+      <h3>Hilton Marsa Alam Nubian Resort</h3>
+      <p><i class="bi bi-geo-alt-fill"></i> Marsa Alam, Egypt</p>
+      <p>Family-friendly resort with private beach, pools, and water activities in Marsa Alam.</p>
+      <div class="rating">
+        <span><i class="fa-solid fa-star"></i> 4.4</span>
+        <span>(1,520 reviews)</span>
+      </div>
+      <div class="budjet">
+        <h3>$180 USD<span>/night</span></h3>
+        <button data-bs-toggle="modal" data-bs-target="#hotelModal" data-hotel="5">Book Now</button>
+      </div>
+    </div>
+
+    <!-- 6. Mena House Hotel -->
+    <div class="card">
+      <img src="./images/Mena House Hotel.jpg" alt="">
+      <h3>Mena House Hotel</h3>
+      <p><i class="bi bi-geo-alt-fill"></i> Giza, Egypt</p>
+      <p>Historic luxury hotel near the Pyramids offering stunning views, gardens, and classic rooms.</p>
+      <div class="rating">
+        <span><i class="fa-solid fa-star"></i> 4.7</span>
+        <span>(8,900 reviews)</span>
+      </div>
+      <div class="budjet">
+        <h3>$210 USD<span>/night</span></h3>
+        <button data-bs-toggle="modal" data-bs-target="#hotelModal" data-hotel="6">Book Now</button>
+      </div>
+    </div>
+
+  </div>
+<div class="modal fade" id="hotelModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-scrollable">
+    <div class="modal-content">
+
+      <div class="modal-header border-0">
+        <h5 class="modal-title fs-3" id="hotelModalLabel2"></h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+
+      <div class="modal-body">
+
+        <!-- Carousel -->
+        <div id="hotelCarousel2" class="carousel slide mb-3" data-bs-ride="carousel">
+          <div class="carousel-inner" id="carouselImages2"></div>
+
+          <button class="carousel-control-prev" type="button" data-bs-target="#hotelCarousel2" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+          </button>
+
+          <button class="carousel-control-next" type="button" data-bs-target="#hotelCarousel2" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+          </button>
+        </div>
+
+        <!-- Info -->
+        <div class="hotel-info mb-3">
+          <p class="fs-5" id="hotelDescription2"></p>
+          <p><strong>Facilities:</strong> <span id="hotelFacilities2"></span></p>
+          <p><strong>Price per night:</strong> <span id="hotelPrice2"></span></p>
+          <p><strong>Rating:</strong> <span id="hotelRating2"></span></p>
+        </div>
+
+        <!-- Map -->
+        <div class="text-center">
+          <p><strong>Location:</strong>
+            <a id="hotelMapLink2" href="#" target="_blank" class="map-link">
+              View on Google Maps
+            </a>
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</div>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./index.js"></script>
+</body>
+</html>

@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hotels</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <header id="header">
+        <nav class="navbar navbar-expand-lg w-100 position-fixed">
+  <div class="container-fluid nav">
+    <img src="./images/logo2.jpg" alt="" class="navbar-brand logo" >
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav m-auto">
+        <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
+        <a class="nav-link" href="./quiz.html">Quiz</a>
+        <a class="nav-link" href="./destinations.html">Destination</a>
+        <a class="nav-link" href="./hotels.html">Hotels</a>
+        <a class="nav-link contact" href="./contact.html">Contact</a>
+      </div>
+
+      <div class="right ms-auto">
+          <div class="icon_container"><i class="bi bi-globe"></i> ع</div>
+<div class="icon_container">
+    <i class="bi bi-moon" id="moon"></i>
+</div>
+          <button class="sign_in" data-bs-toggle="modal" data-bs-target="#signinModal">Sign in</button>
+
+          
+          <button class="sign_up" data-bs-toggle="modal" data-bs-target="#signupModal">Sign up</button>
+        </div>
+    </div>
+  </div>
+</nav>
+    </header>
+    <div class="modal fade" id="signupModal">
+            
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content p-3">
+
+      <div class="modal-header border-0">
+        <h5 class="modal-title">Create Your Account</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+
+      <div class="modal-body">
+
+        <form>
+          <div class="mb-3">
+            <input type="text" class="form-control" placeholder="Full Name">
+          </div>
+
+          <div class="mb-3">
+            <input type="email" class="form-control" placeholder="Email Address">
+          </div>
+
+          <div class="mb-3">
+            <input type="password" class="form-control" placeholder="Password">
+          </div>
+
+          <div class="mb-3">
+            <input type="password" class="form-control" placeholder="Confirm Password">
+          </div>
+
+          <div class="form-check mb-3">
+            <input class="form-check-input" type="checkbox">
+            <label class="form-check-label">
+              I agree to Terms & Privacy
+            </label>
+          </div>
+
+          <button class="btn btn-primary w-100">Sign Up</button>
+          <div class="social-login mt-3">
+    <button class="btn btn-google w-100 mb-2">
+        <i class="bi bi-google"></i> Continue with Google
+    </button>
+    <button class="btn btn-facebook w-100">
+        <i class="bi bi-facebook"></i> Continue with Facebook
+    </button>
+</div>
+        </form>
+
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+
+    <div class="modal fade" id="signinModal">
+            
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content p-3">
+
+      <div class="modal-header border-0">
+        <div class="welcome d-flex flex-column text-center justify-content-between">
+          <h5 class="modal-title fs-2 mb-2">Welcome back!</h5>
+        <p>Sign in to access your personalized recommendations</p>
+        </div>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+
+      <div class="modal-body">
+
+        <form>
+
+          <div class="mb-3">
+            <input type="email" class="form-control" placeholder="Email Address">
+          </div>
+
+          <div class="mb-3">
+            <input type="password" class="form-control" placeholder="Password">
+          </div>
+
+
+          <button class="btn btn-primary w-100">Sign In</button>
+          <div class="social-login mt-3">
+    <button class="btn btn-google w-100 mb-2">
+        <i class="bi bi-google"></i> Continue with Google
+    </button>
+    <button class="btn btn-facebook w-100">
+        <i class="bi bi-facebook"></i> Continue with Facebook
+    </button>
+</div>
+        </form>
+
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<section class="hotels-section">
+  <div class="hotels_titel"><h2>Destinations</h2></div>
+
+  <!-- Search Bar -->
+  <div class="search-bar">
+    <input type="text" placeholder="Search for a hotel or city...">
+    <button>Search</button>
+  </div>
+
+  <div class="destination-cards">
+
+  <!-- 1. Grand Egyptian Museum -->
+  <div class="card" onclick="openModal(1)">
+    <img src="./images/المتحف.jpg" alt="">
+
+    <h3>Grand Egyptian Museum</h3>
+    <p><i class="bi bi-geo-alt-fill"></i> Giza, Egypt</p>
+    
+    <p>The Grand Egyptian Museum is the largest archaeological museum in the world dedicated to a single civilization, showcasing over 100,000 ancient Egyptian artifacts. It is located near the Pyramids of Giza and features the complete Tutankhamun collection displayed together for the first time. The museum presents Egypt’s history from prehistoric periods to the Roman era.</p>
+
+    <div class="rating">
+      <span><i class="fa-solid fa-star"></i> 4.4</span>
+      <span>(134 reviews)</span>
+    </div>
+
+    <div class="tags">
+      <span>History</span>
+      <span>Culture</span>
+      <span>Museum</span>
+    </div>
+  </div>
+
+  <!-- 2. Khan El-Khalili -->
+  <div class="card" onclick="openModal(2)">
+    <img src="./images/خان الخليلي.jpg" alt="">
+    <h3>Khan El-Khalili</h3>
+    <p><i class="bi bi-geo-alt-fill"></i> Cairo, Egypt</p>
+    <p>A famous historic bazaar in the heart of Cairo, full of shops, spices, souvenirs, and traditional Egyptian crafts.</p>
+
+    <div class="rating">
+      <span><i class="fa-solid fa-star"></i> 4.7</span>
+      <span>(3,482 reviews)</span>
+    </div>
+
+    <div class="tags">
+      <span>History</span>
+      <span>Culture</span>
+      <span>Shopping</span>
+    </div>
+  </div>
+
+  <!-- 3. Fayoum Art Center Workshops -->
+  <div class="card" onclick="openModal(3)">
+    <img src="./images/art center.jpg" alt="">
+    <h3>Fayoum Art Center Workshops</h3>
+    <p><i class="bi bi-geo-alt-fill"></i> Fayoum, Egypt</p>
+    <p>Experience traditional Egyptian crafts through hands-on workshops in Fayoum. Learn weaving, tapestry, embroidery, and other heritage arts directly from skilled artisans. Suitable for beginners and visitors who want a creative and cultural experience.</p>
+
+    <div class="rating">
+      <span><i class="fa-solid fa-star"></i> 4.6</span>
+      <span>(87 reviews)</span>
+    </div>
+
+    <div class="tags">
+      <span>Culture</span>
+      <span>Art</span>
+      <span>Workshops</span>
+    </div>
+  </div>
+
+  <!-- 4. Egyptian Therapeutic Baths -->
+  <div class="card" onclick="openModal(4)">
+    <img src="./images/صفات-واحة-سيوة-العلاجية-والطبيعية.jpg" alt="">
+    <h3>Egyptian Therapeutic Baths</h3>
+    <p><i class="bi bi-geo-alt-fill "></i> Egypt</p>
+    <p>Natural therapeutic baths in Egypt known for their healing mineral waters, providing visitors with relaxation, wellness, and rejuvenation experiences.</p>
+
+    <div class="rating">
+      <span><i class="fa-solid fa-star"></i> 4.5</span>
+      <span>(1,024 reviews)</span>
+    </div>
+
+    <div class="tags">
+      <span>Wellness</span>
+      <span>Health</span>
+      <span>Relaxation</span>
+    </div>
+  </div>
+
+</div>
+</section>
+
+<section class="destinations">
+<div class="modal fade" id="hotelModal1" tabindex="-1">
+  <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content">
+
+      <!-- Header -->
+      <div class="modal-header">
+        <h5 class="modal-title fw-bold" id="hotelModalLabel"></h5>
+        <button class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+
+      <!-- Body -->
+      <div class="modal-body">
+
+        <!-- Video -->
+        <div class="ratio ratio-16x9 mb-3">
+            <video id="placeVideo" class="w-100 h-100" loop autoplay muted playsinline>
+                     <source src="" type="video/mp4">
+                     Your browser does not support the video tag.
+            </video>         
+        </div>
+        
+        <div id="hotelCarousel" class="carousel slide mb-4">
+          <div class="carousel-inner" id="carouselImages"></div>
+
+          <button class="carousel-control-prev" type="button" data-bs-target="#hotelCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+          </button>
+
+          <button class="carousel-control-next" type="button" data-bs-target="#hotelCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+          </button>
+        </div>
+
+        <!-- Description -->
+        <p class="fs-5 text-muted" id="hotelDescription"></p>
+
+        <!-- Info Grid -->
+        <div class="row g-3">
+
+          <div class="col-md-6">
+            <div class="card p-2 shadow-sm">
+              <strong>🕒 Best Time</strong>
+              <span id="bestTime"></span>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="card p-2 shadow-sm">
+              <strong>🚶 Crowded Time</strong>
+              <span id="crowdedTime"></span>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="card p-2 shadow-sm">
+              <strong>🎟 Ticket</strong>
+              <span id="ticket"></span>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="card p-2 shadow-sm">
+              <strong>👶 Kids Friendly</strong>
+              <span id="kids"></span>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="card p-2 shadow-sm">
+              <strong>🏨 Facilities</strong>
+              <span id="hotelFacilities"></span>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="card p-2 shadow-sm">
+              <strong>⭐ Rating</strong>
+              <span id="hotelRating"></span>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="card p-2 shadow-sm">
+              <strong>💡 Tips</strong>
+              <span id="tips"></span>
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="card p-2 shadow-sm">
+              <strong>⚠️ Warnings</strong>
+              <span id="warnings"></span>
+            </div>
+          </div>
+
+          <div class="col-12">
+            <div class="card p-2 shadow-sm">
+              <strong>🎯 What You'll Gain</strong>
+              <span id="value"></span>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Map -->
+        <div class="text-center mt-4">
+          <a id="hotelMapLink" target="_blank" class="btn btn-primary">
+            📍 View on Google Maps
+          </a>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</div>
+</section>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./index.js"></script>
+</body>
+</html>

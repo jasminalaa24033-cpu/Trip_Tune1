@@ -57,13 +57,16 @@ body.dark textarea {
 body.dark .sign_in {
     border-color: #5a7bb8;
     color: #e0e6f2;
-    background-color: #0f2647;
+    background-color: #0f2747;
 }
 body.dark .sign_in:hover {
     background-color: #1b365f;
 }
+body.dark .signin{
+    background-color: #0074cc;
+}
 body.dark .signin:hover {
-    background-color: #1b365f;
+    background-color: #2e5c9c;
 }
 body.dark .sign_up,
 body.dark .signup {
@@ -248,7 +251,7 @@ body.dark .modal-body .btn-google:hover {
 }
 @media (max-width: 991px){
      .navbar{
-        position: relative; /* مهم جدًا */
+        position: relative; 
     }
     .navbar-collapse{
         position: absolute;
@@ -266,8 +269,8 @@ body.dark .modal-body .btn-google:hover {
     font-size: 20px;
     font-weight: 400;
 }
-body.dark a {
-    color: #2a2a2a !important;
+body.dark .navbar-nav a {
+    color: #383838 !important;
 }
 
 }

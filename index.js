@@ -127,7 +127,7 @@ const destinationsData = {
     warnings: "Summer can be very hot outside",
     value: "Learn about ancient Egyptian history and see the Tutankhamun treasures",
     map: "https://www.google.com/maps?q=Grand+Egyptian+Museum",
-    video: "images/videoplayback.mp4",
+    video: "https://www.youtube.com/embed/s735gqF_cfc?si=1G-2mMRzlpTD7ch8",
     images: [
       "images/المتحف.jpg",
       "images/ال.jpeg",
@@ -148,7 +148,7 @@ const destinationsData = {
     warnings: "Crowded, especially during holidays",
     value: "Experience authentic Egyptian market culture and practice bargaining",
     map: "https://www.google.com/maps?q=Khan+El-Khalili+Cairo",
-    video: "images/خان الخليلي مصر _ khan alkhalili egypt 🇪🇬.mp4",
+    video: "https://www.youtube.com/embed/s735gqF_cfc?si=1G-2mMRzlpTD7ch8",
     images: [
       "images/خان الخليلي 4.jpg",
       "images/خان الخليلي.jpg",
@@ -169,7 +169,7 @@ const destinationsData = {
     warnings: "Limited English-speaking instructors",
     value: "Learn traditional crafts and create your own souvenir",
     map: "https://www.google.com/maps?q=Fayoum+Art+Center",
-    video: "images/0404.mp4",
+    video: "https://www.youtube.com/embed/s735gqF_cfc?si=1G-2mMRzlpTD7ch8",
     images: [
       "images/art center.jpg",
       "images/Fayoum Art Center Workshops 2.jpg",
@@ -189,7 +189,7 @@ const destinationsData = {
     warnings: "Not recommended for people with certain medical conditions",
     value: "Relax, rejuvenate, and learn about natural therapeutic traditions",
     map: "https://www.google.com/maps?q=Siwa+Oasis+Thermal+Baths",
-    video: "images/الساحه العلاجيه.mp4",
+    video: "https://www.youtube.com/embed/s735gqF_cfc?si=1G-2mMRzlpTD7ch8",
     images: [
       "images/oases.jpg",
       "images/oases2.jpg",
@@ -218,11 +218,7 @@ function openModal(id) {
   document.getElementById("warnings").innerText = place.warnings;
   document.getElementById("value").innerText = place.value;
 
-  document.getElementById("hotelMapLink").href = place.map;
-const videoEl = document.getElementById("placeVideo");
-videoEl.querySelector("source").src = place.video; // مكان الفيديو المحلي
-videoEl.load();
-videoEl.play();
+  document.getElementById("placeVideo").src = place.video;
   // Update carousel images
   const carousel = document.getElementById("carouselImages");
   carousel.innerHTML = "";

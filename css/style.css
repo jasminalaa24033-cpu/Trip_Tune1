@@ -132,12 +132,15 @@ body.dark .nav-buttons button:disabled {
     background-color: #1b2a4a;
     color: #999;
 }
+
 #header{
     width: 100%;
     height: 100%;
 }
 #header .navbar{
-    /* background-color: aqua; */
+    
+    top: 0;
+    left: 0;
     width: 100%;
     height: 80px;
     padding-left:120px ;
@@ -276,6 +279,8 @@ body.dark .navbar-nav a {
 }
 
 #Home{
+    
+    padding-top: 60px;
     height: 100vh;
     width: 100%;
     background-image: url(../images/main\ background.jpg);
@@ -346,8 +351,50 @@ body.dark .navbar-nav a {
     padding-left:20px ;
     padding-right: 20px;
     }
-   
-    
+
+    #Home .shadow .content .btn {
+    width: 90%;
+    max-width: 280px;
+    font-size: 16px;
+    padding: 12px 20px;
+    border-radius: 30px;
+    display: inline-block;
+    text-align: center;
+    margin: 20px auto;
+}
+
+#Home .shadow .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+    #Home {
+        height: auto;
+        min-height: 100vh;
+    }
+
+    #Home .shadow {
+        padding-top: 100px; /* عشان النافبار */
+        align-items: center;
+    }
+
+    #Home .shadow .content {
+        width: 100%;
+        padding: 20px;
+    }
+
+    #Home .shadow .content h1 {
+        font-size: 28px;
+    }
+
+    #Home .shadow .content h3 {
+        font-size: 15px;
+    }
+    #header .navbar .logo {
+        width: 120px;
+        height: auto;
+    }
+
 }
 /* السكشن */
 .signup-section {
@@ -448,18 +495,32 @@ body.dark .navbar-nav a {
 
 /* Responsive */
 @media (max-width: 768px) {
-    .signup-section .container {
-        flex-direction: column;
-        text-align: center;
-    }
+   .signup-section {
+    padding: 50px 20px;
+}
 
-    .buttons {
-        width: 100%;
-    }
+.signup-section .container {
+    flex-direction: column;
+    text-align: center;
+}
 
-    .btn {
-        width: 100%;
-    }
+.signup-section .text {
+    max-width: 100%;
+}
+
+.signup-section ul {
+    padding: 0;
+}
+
+.buttons {
+    width: 100%;
+    align-items: center;
+}
+
+.signup-section .buttons .btn {
+    width: 100%;
+    max-width: 300px;
+}
 }
 .why {
     padding: 80px 10%;
@@ -695,6 +756,20 @@ hr {
     margin-bottom: 15px;
     color:rgb(0, 168, 53);
 }
+
+@media (max-width: 768px) {
+
+   #hotelModal1 .modal-dialog {
+    max-width: 100% !important;
+    margin: 0;
+  }
+  
+
+}
+.modal{
+    margin-top: 50px;
+}
+
 .destinations{
     margin-top: 60px;
 }
@@ -807,6 +882,31 @@ hr {
    .destination-cards {
     display: grid;
     grid-template-columns: 1fr;}
+    .search-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10px;
+}
+
+.search-bar input {
+    /* width: 100%; */
+    font-size: 14px;
+    padding: 12px 15px;
+    border-radius: 50px;
+}
+
+.search-bar button {
+    padding: 10px 16px;
+    font-size: 14px;
+    border-radius: 50px;
+    
+}
+
+/* يخليهم في نفس السطر بشكل مرتب */
+.search-bar {
+    gap: 6px;
+}
 }
 .contact-page {
   min-height: 100vh; /* يملأ الصفحة */
@@ -1056,4 +1156,29 @@ iframe {
 
 #hotelModal1 .modal-content {
     border-radius: 10px; /* اختياري: حواف مدورة */
+}
+@media (max-width: 768px) {
+
+    .hotels-section .search-bar {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+        padding: 0 10px;
+    }
+
+    .hotels-section .search-bar input {
+        width: 100%;
+        font-size: 14px;
+        padding: 12px 15px;
+        border-radius: 50px;
+    }
+
+    .hotels-section .search-bar button {
+        padding: 10px 16px;
+        font-size: 14px;
+        border-radius: 50px;
+        white-space: nowrap;
+    }
+
 }
